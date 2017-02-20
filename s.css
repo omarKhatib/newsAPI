@@ -16,8 +16,20 @@
     
     }
 
+hr{
+    width:90%;
+    border-top-color:#807d7d;
+    
+}
 .contentC{
     height: 80vh;
+    
+}
+
+.select{
+    width:60%;
+    margin-right: 20%;
+        margin-left: 20%;
     
 }
 
