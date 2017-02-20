@@ -36,6 +36,7 @@ a.controller('ctrl',function($scope ,newsServ){
     //$scope.url = 'http://www.bbc.co.uk/news/uk-politics-39020252';
     $scope.send = function(){
         
+        $('.card').html('<img style="width:100%; hight:100%" src="loading.gif">');
     newsServ.getData($scope.selectedSource,$scope.sortingType,$scope.category).then(function(response) {
         
         $scope.news = response.data;
@@ -49,10 +50,11 @@ a.controller('ctrl',function($scope ,newsServ){
 
     
     $scope.getSources = function(){
+        $('.sources').html('<img style="width:100%; hight:100%" src="loading.gif">');
         newsServ.getSources($scope.category).then(function(response) {
         $scope.sources = response.data.sources;
         newsServ.sources = $scope.sources;
-            $scope.send();
+            //$scope.send();
         
         
     });

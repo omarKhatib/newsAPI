@@ -15,7 +15,7 @@
 
     </head>
     
-   <body ng-app='app' ng-controller='ctrl' ng-init='getSources()'>
+   <body ng-app='app' ng-controller='ctrl' ng-init='getSources();send()'>
        <div class='container-fluid'>
            
            <select ng-model='category' ng-change='getSources()' >
@@ -28,7 +28,7 @@
            </select> !-->
            
            <div class='row'>
-               <div class='col-md-1' ng-repeat='s in sources'>
+               <div class='col-md-1 col-sm-1 col-xs-3 sources' ng-repeat='s in sources'>
                <img ng-click='getSelectedSource(s.id)' class='sourcesImages'  src='{{s.urlsToLogos.small}}'>
                </div>
            </div>
