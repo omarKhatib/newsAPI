@@ -17,26 +17,24 @@
     
    <body ng-app='app' ng-controller='ctrl' ng-init='getSources();send()'>
        <div class='container-fluid'>
-           
-          
+           <div class='row selectrow'>
+
            <div class ="form-group">
-            <label for="sel1">category</label>
+            <div class='col-md-6'>
   <select class="form-control select"  ng-model='category' ng-change='getSources()'>
     <option ng-repeat='c in categories' value='{{c}}'>{{c}}</option>
   </select>
-           </div>
-           
-               
-           <div class ="form-group">
-           <label for="sel1">sorting type</label>
+               </div>    
+           <div class='col-md-6'>
   <select class="form-control select"   ng-model='sortingType' ng-change='send()'>
    <option value='top'>top</option>
     <option value='latest'>latest</option>
                <option value='popular'>popular</option>
            </select>
+               </div>
            </div>
-
-           
+       </div>
+    
         <hr>
            <div class='row'>
                <div class='col-md-1 col-sm-1 col-xs-3 sources' ng-repeat='s in sources'>
@@ -62,7 +60,8 @@
            
           <div class="image">
              
-            <img src='{{item.urlToImage}}' />
+            <div class="box" style="background-image: url('{{item.urlToImage}}')">
+  </div>
            
           </div>
           <div class="content pull-left">
@@ -97,7 +96,7 @@
                
        </div>
        </div>
-       
+     
    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
        <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
