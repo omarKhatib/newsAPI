@@ -23,9 +23,15 @@
            </select>
            
            
-           <select ng-model='selectedSource' ng-change='send()' >
+          <!-- <select ng-model='selectedSource' ng-change='send()' >
            <option ng-repeat='s in sources' value='{{s.id}}'>{{s.id}}</option>
-           </select>
+           </select> !-->
+           
+           <div class='row'>
+               <div class='col-md-1' ng-repeat='s in sources'>
+               <img ng-click='getSelectedSource(s.id)' class='sourcesImages'  src='{{s.urlsToLogos.small}}'>
+               </div>
+           </div>
            
            
            

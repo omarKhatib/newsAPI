@@ -17,10 +17,17 @@
     }
 
 
-img{
+.card img{
 height:50%;
 width:100%;
 }
+.sourcesImages{
+   height: 40px; 
+width: 100%;
+    margin:10px;
+     cursor:pointer;
+}
+
 
     .content {
       float: left;

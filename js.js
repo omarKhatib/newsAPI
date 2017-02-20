@@ -48,7 +48,7 @@ a.controller('ctrl',function($scope ,newsServ){
     
 
     
-    $scope.getSources = function(i){
+    $scope.getSources = function(){
         newsServ.getSources($scope.category).then(function(response) {
         $scope.sources = response.data.sources;
         newsServ.sources = $scope.sources;
@@ -56,6 +56,14 @@ a.controller('ctrl',function($scope ,newsServ){
         
         
     });
+        
+    }
+    
+    $scope.getSelectedSource = function(i){
+        
+        $scope.selectedSource = i;
+        $scope.send();
+        
         
     }
    // $scope.getUrl = function(i){
