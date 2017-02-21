@@ -15,7 +15,7 @@
 
     </head>
     
-   <body ng-app='app' ng-controller='ctrl' ng-init='getSources();send()'>
+<body ng-app='app' ng-controller='ctrl' ng-init='getSources();getArticles()'>
        <div class='container-fluid'>
            <div class='row selectrow'>
 
@@ -26,7 +26,7 @@
   </select>
                </div>    
            <div class='col-md-6'>
-  <select class="form-control select"   ng-model='sortingType' ng-change='send()'>
+  <select class="form-control select"   ng-model='sortingType' ng-change='getArticles()'>
    <option value='top'>top</option>
     <option value='latest'>latest</option>
                <option value='popular'>popular</option>
