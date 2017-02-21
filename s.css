@@ -12,6 +12,7 @@
     
     background-color: #F8F8F8;
     margin-bottom: 10px;
+    margin-bottom: 10px;
     color:#7A7A7A;
     
     }
@@ -22,7 +23,8 @@ hr{
     
 }
 .contentC{
-    height: 80vh;
+    height: 100vh;
+   
     
 }
 .selectrow{
@@ -71,4 +73,8 @@ width: 100%;
 small{
     color:rgb(116, 111, 111);
     font-size: 100%;
+}
+div:not(.box , .contentC) {
+    height: auto !important;
+    
 }

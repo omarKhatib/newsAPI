@@ -24,6 +24,7 @@ a.service("newsServ",function($http){
 });
 
 a.controller('ctrl',function($scope ,newsServ){
+    
     $scope.categories = [ 'business', 'entertainment', 'gaming', 'general', 'music', 'science-and-nature', 'sport', 'technology'];
     $scope.selectedSource='bbc-news';
     $scope.sortingType='top';
@@ -63,4 +64,6 @@ a.controller('ctrl',function($scope ,newsServ){
         
         
     }
+    
+    
 });
