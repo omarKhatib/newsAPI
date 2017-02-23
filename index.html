@@ -21,11 +21,13 @@
 
            <div class ="form-group">
             <div class='col-md-4'>
+                <b>category</b>
   <select class="form-control select"  ng-model='category' ng-change='getSources()'>
     <option ng-repeat='c in categories' value='{{c}}'>{{c}}</option>
   </select>
                </div>    
            <div class='col-md-4'>
+           <b>sorting type</b>
   <select class="form-control select"  ng-model='sortingType' ng-change='getArticles()'>
    <option value='top'>top</option>
     <option value='latest'>latest</option>
@@ -33,6 +35,7 @@
            </select>
                </div>
                <div class='col-md-4'>
+               <b>column number</b>
   <select class="form-control select"  ng-model='colSize' ng-init='colSize=4;'>
     <option value='12'>1</option>
       <option value='6'>2</option>
@@ -45,11 +48,14 @@
        </div>
     
         <hr>
-           <div class='row'>
-               <div class='col-md-1 col-sm-1 col-xs-3 sources' ng-repeat='s in sources'>
-               <img ng-click='getSelectedSource(s.id)' class='sourcesImages'  src='{{s.urlsToLogos.small}}'>
+         <div class='row'>
+               <div class='col-md-2 col-sm-1 col-xs-3 sourcesImages'  ng-repeat='s in sources'>
+               <img ng-click='getSelectedSource(s.id)'  src='{{s.urlsToLogos.small}}'>
                </div>
-           </div>
+           </div> 
+           
+           
+        
            
         <hr>
            

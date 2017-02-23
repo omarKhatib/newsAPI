@@ -46,9 +46,9 @@ width:60%;
   background-position: center;
 }
 .sourcesImages{
-   height: 40px; 
-width: 100%;
-    margin:10px;
+   height: auto; 
+width: auto;
+    margin:1px;
      cursor:pointer;
 }
 
