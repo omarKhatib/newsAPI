@@ -1,7 +1,7 @@
 var a = angular.module('app',[]);
 var config = {  
 headers: {
-        'X-Api-Key': 'c8df555f65d84cefb6c6d51336ce268a'
+        "X-Api-Key": "5b06d48ffce44fc89f9c629d43b88af2"
     }
 };
 
@@ -9,14 +9,14 @@ a.service("newsServ",function($http){
     this.news = {};
     this.sources = [];
     this.getArticles = function(source,sorting){
- return $http.get("https://newsapi.org/v1/articles?source="+source+"&sortBy="+sorting ,config);
+ return $http.get("https://newsapi.org/v1/articles?source="+source+"&sortBy="+sorting+"&apiKey=26a63d0675f04d459b2214eaf8808f3c"); // or ,config
         
         
     }
 
     
     this.getSources = function(category){
-         return $http.get("https://newsapi.org/v1/sources?language=en&category="+category,config);
+         return $http.get("https://newsapi.org/v1/sources?language=en&category="+category+"&apiKey=26a63d0675f04d459b2214eaf8808f3c"); // or ,config
     }
     
     
@@ -49,6 +49,7 @@ a.controller('ctrl',function($scope ,newsServ){
         $('.sources').html('<img style="width:100%; hight:100%" src="loading.gif">');
         newsServ.getSources($scope.category).then(function(response) {
         $scope.sources = response.data.sources;
+            
         newsServ.sources = $scope.sources;
             //$scope.send();
         

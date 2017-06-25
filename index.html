@@ -1,4 +1,4 @@
-<hmtl>
+<html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -50,7 +50,7 @@
         <hr>
          <div class='row'>
                <div class='col-md-2 col-sm-1 col-xs-3 sourcesImages'  ng-repeat='s in sources'>
-               <img ng-click='getSelectedSource(s.id)'  src='{{s.urlsToLogos.small}}'>
+               <img title='{{s.name}}' ng-click='getSelectedSource(s.id)'  src='{{s.urlsToLogos.small}}'>
                </div>
            </div> 
            
@@ -118,4 +118,4 @@
     <script src='js.js'></script>
     </body>
     
-</hmtl>
+</html>
