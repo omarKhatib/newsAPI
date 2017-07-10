@@ -25,14 +25,15 @@ a.service("newsServ",function($http){
 
 a.controller('ctrl',function($scope ,newsServ){
     
-    $scope.categories = [ 'business', 'entertainment', 'gaming', 'general', 'music', 'science-and-nature', 'sport', 'technology'];
+    $scope.categories = [ 'business', 'entertainment', 'gaming', 'general', 'music', 'science-and-nature', 'sport', 'technology'];      //I putted this manually since this is the only thing not provided by API.
     $scope.selectedSource='bbc-news';
     $scope.sortingType='top';
         $scope.category='general';
     //$scope.url = 'http://www.bbc.co.uk/news/uk-politics-39020252';
     $scope.getArticles = function(){
         
-        $('.card').html('<img style="width:100%; hight:100%" src="loading.gif">');
+        $('.card').html('<img style="width:100%; hight:100%" src="loading.gif">'); //loading image while getting
+        
     newsServ.getArticles($scope.selectedSource,$scope.sortingType,$scope.category).then(function(response) {
         
         $scope.news = response.data;

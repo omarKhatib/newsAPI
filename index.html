@@ -49,6 +49,9 @@
     
         <hr>
          <div class='row'>
+             <p id='note'>
+                 <small><u>note: sources's logos are deprecated by newsAPI</u></small>
+             </p>
                <div class='col-md-2 col-sm-1 col-xs-3 sourcesImages'  ng-repeat='s in sources'>
                <img title='{{s.name}}' ng-click='getSelectedSource(s.id)'  src='{{s.urlsToLogos.small}}'>
                </div>
@@ -58,12 +61,6 @@
         
            
         <hr>
-           
-           
-           
-           
-           
-           
            
            
            
@@ -104,10 +101,6 @@
                </div>
                
                
-              <!-- <div class='col-md-6'>
-                  
-                   
-               </div> !-->
                
        </div>
        </div>

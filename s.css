@@ -78,3 +78,6 @@ div:not(.box , .contentC) {
     height: auto !important;
     
 }
+#note{
+    text-align:center;
+}
